@@ -133,7 +133,7 @@ extension PythonLibrary {
             pythonLibraryHandle = self.defaultLibraryHandle
         }
         else if let pythonLibraryPath = Environment.library.value {
-            pythonLibraryHandle = self.loadPythonLibrary(at: pythonLibraryPath)
+            pythonLibraryHandle = self.loadPythonLibrary(at: "/usr/local/opt/python/Frameworks/Python.framework/Versions/3.7/lib/libpython3.7.dylib")
         }
         else {
             pythonLibraryHandle = self.findAndLoadExternalPythonLibrary()
